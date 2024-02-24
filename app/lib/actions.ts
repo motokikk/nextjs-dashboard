@@ -41,7 +41,7 @@ const createInvoice = async (prevState: State, formData: FormData) => {
       message: 'Missing Fields. Failed to Create Invoice.',
     };
   }
-  const { customerId, amount, status } = validateFilelds.data;
+  const { customerId, amount, status } = validatedFields.data;
   const amountInCents = amount * 100;
   const date = new Date().toISOString().split('T')[0];
   try {
